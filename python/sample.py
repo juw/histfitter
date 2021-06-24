@@ -684,24 +684,24 @@ class Sample:
             if configMgr.hists[nomSysName] != None:
               if not lowName+"_test" in list(configMgr.hists.keys()) and not highName+"_test" in list(configMgr.hists.keys()):
                 configMgr.hists[lowName+"_test"] = configMgr.hists[lowName].Clone(lowName+"_test")
-                log.info(lowName + " / " + nomSysName)
+                log.verbose(lowName + " / " + nomSysName)
                 success = configMgr.hists[lowName].Divide( configMgr.hists[nomSysName] )
                 if not success:
                     log.error( "Can not divide: " + lowName + " by " + nomSysName )
                     raise RuntimeError("Divide by zero.")
                 else:
-                    log.info(lowName + " * " + nomName)
+                    log.verbose(lowName + " * " + nomName)
                     configMgr.hists[lowName].Multiply( configMgr.hists[nomName] )
                     pass
                 #
                 configMgr.hists[highName+"_test"] = configMgr.hists[highName].Clone(highName+"_test")
-                log.info(highName + " * " + nomSysName)
+                log.verbose(highName + " / " + nomSysName)
                 success = configMgr.hists[highName].Divide( configMgr.hists[nomSysName] )
                 if not success:
                     log.error( "Can not divide: " + highName + " by " + nomSysName )
                     raise RuntimeError("Divide by zero.")
                 else:
-                    log.info(highName + " * " + nomName)
+                    log.verbose(highName + " * " + nomName)
                     configMgr.hists[highName].Multiply( configMgr.hists[nomName] )
                     pass
 

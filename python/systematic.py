@@ -65,6 +65,7 @@ class SystematicBase:
 
         allowedSys = ["histoSys","overallSys","userOverallSys","overallHistoSys","normHistoSys",
                       "shapeSys","shapeStat","histoSysOneSide","histoSysOneSideSym","normHistoSysOneSide","normHistoSysOneSideSym","userHistoSys","userNormHistoSys",
+                      "overallSysOneSide", "overallSysOneSideSym",
                       "overallNormHistoSys","overallNormHistoSysOneSide","overallNormHistoSysOneSideSym", "overallNormSys", 
                       "normHistoSysEnvelopeSym", "histoSysEnvelopeSym", "overallNormHistoSysEnvelopeSym" ]
 
